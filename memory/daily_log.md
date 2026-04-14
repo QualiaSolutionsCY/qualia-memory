@@ -130,3 +130,24 @@
 **Event:** Session closed. Review daily log for promotion candidates.
 
 ---
+
+### 2026-04-14 05:49:29 — Session end (obs)
+
+**Working directory:** `/home/qualia/obs`
+**Event:** Session closed. Review daily log for promotion candidates.
+
+---
+
+### 2026-04-14 05:55:40 — Session end (qualiafinal)
+
+**Working directory:** `/home/qualia/Projects/qualia/qualiafinal`
+**Event:** Session closed. Review daily log for promotion candidates.
+
+---
+
+### 2026-04-14 05:57:50 — Session end (qualiafinal)
+
+**Working directory:** `/home/qualia/Projects/qualia/qualiafinal`
+**Event:** Session closed. Review daily log for promotion candidates.
+
+---
