@@ -5,14 +5,15 @@
 Last updated: 2026-04-14
 
 ## Current Focus
-- Setting up LLM Wiki / Second Brain system in Obsidian vault
-- Vault has existing business data: 6 active clients, 12+ projects, 5 team members
-- NotebookLM MCP installed and connected for research queries
+- Second brain vault fully operational — 34 GitHub repos ingested into wiki/sources/
+- All hooks, cron, plugins, skills installed and working
+- Ready for: more source ingestion, querying, and first wiki lint
 
 ## Recent Decisions
 - Adopted Karpathy's LLM Wiki pattern for knowledge management
-- Using claude-obsidian architecture (AgriciDaniel/claude-obsidian)
-- Building around existing vault structure, not replacing it
+- Built around existing vault structure (Clients/, Projects/, Team/, Finances/)
+- Ingested all 34 Qualiasolutions GitHub repos as structured wiki sources
+- Categorized repos: 3 internal tools, 20 active client projects, 11 older/archived
 
 ## Active Context
 - Owner: Fawzi Goussous, Nicosia, Cyprus

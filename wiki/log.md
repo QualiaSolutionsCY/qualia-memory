@@ -13,3 +13,9 @@
   - Created: `CLAUDE.md` (master schema)
   - Preserved: All existing folders (Clients/, Projects/, Team/, Finances/, Research/)
   - Integrated existing content into wiki index
+- **INGEST** — Processed all 34 GitHub repos (Qualiasolutions org) into `wiki/sources/`
+  - 12 active repos (batch 1): qualiafinal, ALKEMY, kronospan, giannino-mayfair, qualia-erp, etc.
+  - 11 mid-activity repos (batch 2): shai, mpm, theranote, chainwise, carton, etc.
+  - 11 older repos (batch 3): boardroom1, blackgoldunited, loca-noche, Vuet, etc.
+  - Sources: README.md, CLAUDE.md, PROJECT.md, package.json per repo
+  - Updated wiki/index.md with all 34 source entries, categorized
