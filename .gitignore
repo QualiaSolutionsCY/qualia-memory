@@ -1,0 +1,8 @@
+# Obsidian workspace (changes every time you open a file)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# OS files
+.DS_Store
+Thumbs.db
