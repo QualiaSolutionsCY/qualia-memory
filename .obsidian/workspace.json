@@ -1,0 +1,228 @@
+{
+  "main": {
+    "id": "e885a8e08460632a",
+    "type": "split",
+    "children": [
+      {
+        "id": "8dd2ced791a34095",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "80a368bd3f6e01c6",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a428c120f96014ef",
+    "type": "split",
+    "children": [
+      {
+        "id": "c6dc4e2da8c25fae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f654078bb337d58e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      },
+      {
+        "id": "3b09798fdbbcbaf7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be954f83b92e5a95",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "b1b5588c60884b73",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "8e0593bec660e321",
+    "type": "split",
+    "children": [
+      {
+        "id": "b92d29d1c821e9e0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "672353e079f4d9e6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Emplyees.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Emplyees"
+            }
+          },
+          {
+            "id": "fa91eb6ceb07efe5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "b55a3237dc54676a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "42a3f5c86f215c69",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "aaebf941492e6a77",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "80a368bd3f6e01c6",
+  "lastOpenFiles": [
+    "_templates/analysis.md",
+    "_templates/analysis.md.tmp.17857.1776128526862",
+    "_templates/source.md",
+    "_templates/source.md.tmp.17857.1776128526247",
+    "_templates/entity.md",
+    "_templates/entity.md.tmp.17857.1776128525604",
+    "_templates/concept.md",
+    "_templates/concept.md.tmp.17857.1776128524911",
+    "memory/daily_log.md",
+    "memory/daily_log.md.tmp.17857.1776128524192",
+    "memory/memory.md",
+    "memory/memory.md.tmp.17857.1776128523478",
+    "memory/user.md",
+    "memory/user.md.tmp.17857.1776128522665",
+    "memory/soul.md",
+    "memory/soul.md.tmp.17857.1776128521919",
+    "wiki/overview.md",
+    "wiki/overview.md.tmp.17857.1776128521305",
+    "wiki/log.md",
+    "wiki/log.md.tmp.17857.1776128520587",
+    "wiki/hot.md",
+    "wiki/index.md",
+    "CLAUDE.md",
+    "Clients/Kounouz.md",
+    "Untitled 1.canvas",
+    "Index.md",
+    "Workflow.md",
+    "Untitled.canvas",
+    "Team/Fawzi Goussous.md",
+    "Emplyees.md",
+    "Clients/Aris.md",
+    "Projects/Qualia Framework v2.md",
+    "Research/BMAD.md",
+    "Research/GSD.md",
+    "Research/SPEC.md",
+    "Research/SUPERPOWERS.md",
+    "Clients/Giulio - Underdogsales.md",
+    "Finances/Overview.md"
+  ]
+}

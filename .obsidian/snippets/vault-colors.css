@@ -1,0 +1,29 @@
+/* Vault Colors — color-code folders in the file explorer */
+
+/* Wiki (AI-managed) — cyan */
+.nav-folder-title[data-path="wiki"] .nav-folder-title-content { color: #00ced1; }
+.nav-folder-title[data-path^="wiki/"] .nav-folder-title-content { color: #00ced1; }
+
+/* Raw (read-only sources) — amber */
+.nav-folder-title[data-path="raw"] .nav-folder-title-content { color: #f59e0b; }
+
+/* Memory (personal context) — violet */
+.nav-folder-title[data-path="memory"] .nav-folder-title-content { color: #8b5cf6; }
+
+/* Templates — muted gray */
+.nav-folder-title[data-path="_templates"] .nav-folder-title-content { color: #6b7280; }
+
+/* Clients — green */
+.nav-folder-title[data-path="Clients"] .nav-folder-title-content { color: #10b981; }
+
+/* Projects — blue */
+.nav-folder-title[data-path="Projects"] .nav-folder-title-content { color: #3b82f6; }
+
+/* Team — pink */
+.nav-folder-title[data-path="Team"] .nav-folder-title-content { color: #ec4899; }
+
+/* Finances — gold */
+.nav-folder-title[data-path="Finances"] .nav-folder-title-content { color: #eab308; }
+
+/* Research — orange */
+.nav-folder-title[data-path="Research"] .nav-folder-title-content { color: #f97316; }
