@@ -11,10 +11,13 @@
             "id": "80a368bd3f6e01c6",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "bases",
+              "state": {
+                "file": "Untitled 1.base",
+                "viewName": "Table"
+              },
+              "icon": "lucide-table",
+              "title": "Untitled 1"
             }
           }
         ]
@@ -165,13 +168,23 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "b7fefd3e3912e275",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -188,6 +201,10 @@
   },
   "active": "80a368bd3f6e01c6",
   "lastOpenFiles": [
+    "Untitled 1.base",
+    "Untitled.base",
+    "Untitled 2.canvas",
+    "2026-04-14.md",
     "Index.md",
     "wiki/hot.md.tmp.17857.1776131211426",
     "wiki/log.md.tmp.17857.1776131199687",
@@ -205,7 +222,6 @@
     "wiki/sources/dawadose.md",
     "wiki/sources/dawadose.md.tmp.17857.1776131087413",
     "wiki/sources/qualia-erp.md",
-    "wiki/sources/qualia-erp.md.tmp.17857.1776131075124",
     "wiki/sources/qualia-framework.md",
     "wiki/sources/giannino-mayfair.md",
     "wiki/sources/kronospan.md",
@@ -222,8 +238,6 @@
     "wiki/sources/doulabot.md",
     "wiki/sources/theranote.md",
     "wiki/sources/CloudIQPro.md",
-    "wiki/sources/gramsgym.md",
-    "wiki/sources/RespectServices.md",
     "Untitled 1.canvas",
     "Untitled.canvas"
   ]
