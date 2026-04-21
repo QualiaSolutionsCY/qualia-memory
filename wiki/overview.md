@@ -21,10 +21,11 @@ A persistent, compounding knowledge base where every article, meeting, transcrip
 4. **Promote** — Daily extraction of key decisions/lessons into `memory.md`
 5. **Lint** — Periodic health checks for orphans, contradictions, gaps
 
-## Current State
+## Current State (refreshed 2026-04-16 from ERP)
 
 - **Team:** 5 members (1 owner, 3 employees, 1 trainee)
-- **Active Clients:** 6 (3 retainer, 3 project-based)
-- **Pipeline:** 6 prospects in demo/meeting stage
-- **Projects:** 12+ active
-- **Wiki Pages:** Growing — ingest sources to expand
+- **ERP Clients:** 46 — 13 active (3 retainer + 10 project-based), 10 hot leads, 6 cold leads, 9 inactive, 3 dead, 5 demo/pending
+- **ERP Projects:** 38 — 8 live in production, ~12 in active development, ~9 demos, rest archived/done
+- **Internal projects:** Qualia ERP, Qualia Framework v2, Qualiafinal, Qualia Dashboard
+- **Wiki source pages (GitHub repos):** 34
+- **MRR:** €2,350/month (€3,150/month from May 2026)

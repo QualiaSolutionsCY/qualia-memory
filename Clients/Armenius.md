@@ -1,12 +1,16 @@
 # Armenius
 
-**Status:** Active (Retainer)
+**ERP name:** I.T. Armenius LTD
+**Status:** Active client (retainer)
+**Phone:** +357-22270068
+**Country:** Cyprus
+**Email:** armenius@qualiasolutions.net
 
-## Financial Summary
+## Financial
 
-- **Retainer:** 250/month
+- **Retainer:** €250/month
 - **Due:** 1st of each month
 
 ## Related
 
-- See [[Finances Overview]]
+- [[Finances Overview]]

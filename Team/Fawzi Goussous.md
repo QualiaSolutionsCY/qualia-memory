@@ -3,7 +3,7 @@
 **Role:** Owner / Founder
 **Company:** [[Index|Qualia Solutions]]
 **Location:** Nicosia, Cyprus
-**Email:** —
+**Email:** info@qualiasolutions.net (admin) / fawzi.ygoussous@gmail.com (personal)
 
 ## Background
 

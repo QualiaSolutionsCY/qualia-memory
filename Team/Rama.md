@@ -1,15 +1,15 @@
 # Rama
 
 **Role:** Trainee
-**Company:** [[Index|Qualia Solutions]]
-**Reports to:** [[Fawzi Goussous]]
 **Email:** rama@qualiasolutions.net
+**Reports to:** [[Fawzi Goussous]]
 
 ## Status
 
-Recently added to the team.
+In training. Currently working on uni-project (university senior project — see [[Qualia ERP]] tasks).
 
-## Assigned Tasks
+## Recent Assignments
 
 - Install Claude Code on Windows (beginner-level onboarding)
-- 2hr meeting with [[Moayad]] (pending scheduling)
+- 2hr meeting with [[Moayad]]
+- uni-project (her senior university project)

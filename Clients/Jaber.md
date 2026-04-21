@@ -1,6 +1,8 @@
 # Jaber
 
-**Status:** Demo stage
+**ERP name:** AlJaber Engineering WLLImage (project) — client record may not exist yet
+**Status:** Demo stage (project is "Active" in ERP but client_id was assigned to a different ERP record)
+**Project created:** 2026-04-03
 
 ## Current Activity
 
@@ -9,4 +11,4 @@
 
 ## Related
 
-- See [[Workflow]] for pipeline stages
+- [[Workflow]]

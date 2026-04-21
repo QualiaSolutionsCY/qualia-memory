@@ -2,55 +2,85 @@
 
 Business brain for Qualia Solutions. Founded by [[Fawzi Goussous]], based in Nicosia, Cyprus.
 
+> Last refreshed from Qualia ERP on 2026-04-16.
+
 ---
 
-## Team
+## Team (5)
 
-- [[Fawzi Goussous]] — Owner / Founder
-- [[Moayad]] — Employee
+- [[Fawzi Goussous]] — Owner / Founder (Cyprus)
+- [[Moayad]] — Employee, HR (Jordan)
 - [[Hasan]] — Employee
-- [[Sally]] — Employee
+- [[Sally]] — Employee (full-time June 2026)
 - [[Rama]] — Trainee
 
-## Clients
+## Active Clients
 
-### Active (Retainer)
-- [[Zyprus - Charalambous]] — 400/month
-- [[Armenius]] — 250/month
-- [[Giulio - Underdogsales]] — Multiple projects, Boss Brainz 2,500/month
+### Retainer
+- [[Zyprus - Charalambous]] — 400/month (CSC Zyprus Property Group Ltd)
+- [[Armenius]] — 250/month (I.T. Armenius LTD)
+- [[Giulio - Underdogsales]] — Boss Brainz 1,700→2,500/mo + multiple projects (GSC Underdog Sales)
 
-### Active (Project-based)
-- [[Sakani]] — Mobile app, 12k JOD
-- [[Maison Maud]] — Web project
-- [[Sofia]] — Testing phase
+### Project-Based — Cyprus
+- [[Aquador]] — Aquad'or Cyprus, luxury perfume e-commerce (aquadorcy.com)
+- [[Dr Marco E]] — Marco Pellizzeri, osteopath
+- [[Froutaria Siga ta Lachana]] — Greek grocery, AI invoice agent
+- [[Glluz]] — GLLUZ LTD (UK)
+- [[Luxury Barber UK]]
+- [[MPM Imports]] — Employee discount PWA
+- [[My Pearl]]
+- [[Alecci Media]]
+- [[Maison Maud]] — Web project (Maud)
 
-### Pipeline (Demo / Meeting)
-- [[Jaber]] — Proposal stage
-- [[Aris]] — Post-demo
-- [[Kounouz]] — Demo stage
-- [[Kronospan]] — Meeting scheduled
-- [[Pita]] — Meeting scheduled
-- [[Innrvo]] — Meeting scheduled
+### Project-Based — Jordan / GCC
+- [[Sakani]] — Mobile app, 12,000 JOD (Smart IT Buildings L.L.C.)
+- [[Mr Morees Abawi]] — UAE
+- [[ZNSO Architecture]] — Kuwait
 
-## Projects
+## Hot Leads (in pipeline)
 
-- [[Qualia ERP]] — Internal tool
-- [[Underdog Academy]] — Giulio, redesign in progress
-- [[Boss Brainz]] — Giulio, 2,500/month
-- [[Giulio Agent]] — AI agent for Giulio
-- [[Cold Calling Wiki]] — Giulio, completed
-- [[Sakani App]] — Mobile app (Expo)
-- [[Sophia AI]] — Zyprus/Charalambous
-- [[Maison Maud Project]] — Web
-- [[Vero]] — Web
-- [[AI Sales Coach]] — AI project
-- [[Peta]] — Project
-- [[Qualia Framework]] — Internal, being deprecated
+- [[Boussias]]
+- [[Concept Carton]]
+- [[DawaDose]] — AI pharmacy product checker
+- [[Giannino Mayfair]] — London Italian restaurant rebuild
+- [[Giannis UK]]
+- [[Kronospan]] — Offline AI financial assistant (NVIDIA DGX)
+- [[Lauren - Zyprus]] / lauren
+- [[Mothana]] — Promotion agency
+- [[SSlaw]] — Sofian & Shehadeh law firm
+- [[temo]]
 
-## Finances
+## Cold Leads
 
-- [[Finances Overview]] — Revenue, invoices, retainers
+- [[Afifi]]
+- [[Honda Dealership]] — Omar Tahboub
+- [[Jordan Olympic Committee]] — contact: Nawras
+- [[Orbit]] — Mohamad Ajlouni
+- [[Pita]] / Peta — last contact 2026-04-05
+- [[Rasmus]]
+
+## Inactive / Past Clients
+
+- [[A&N Global]] — A&N Global Exchange and Money Transfer (live website)
+- [[Black Gold United]] — Custom ERP
+- [[Breathe IV Therapies]]
+- [[Chrysanthos Fakas]] — Alkemy
+- [[Craft Bakery]]
+- [[LuxCars]] — Luxury car dealership (live)
+- [[Tamoil Overseas]]
+- [[Urbans Melons Kids Festive]]
+- [[Woodlocation]] — woodlocation.com (live)
+
+## Internal
+
+- [[Qualia ERP]] — operational source of truth (portal.qualiasolutions.net)
+- [[Qualia Framework v2]] — Claude Code workflow framework
+- [[Qualiafinal]] — company website
+- [[Qualia Dashboard]] — internal desktop status widget
+- [[Aifred]] — Alfred AI sales agent (for Giulio)
 
 ## Operations
 
-- [[Workflow]] — Project lifecycle
+- [[Workflow]] — project lifecycle
+- [[Finances Overview]] — revenue, invoices, retainers
+- `wiki/index.md` — full ingested knowledge map (clients, projects, GitHub repos)

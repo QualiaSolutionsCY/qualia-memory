@@ -1,11 +1,15 @@
 # Innrvo
 
-**Status:** Meeting scheduled
+**ERP name:** Innrvo (display: InrVo)
+**Status:** Active client
+**Last contact:** 2026-04-08
+**Email:** innrvo@qualiasolutions.net
 
-## Current Activity
+## Projects
 
-- Meeting pending
+- **Innrvo** — web design (Done, ERP shows 90% progress, is_finished=true)
+- **Innrvo Marketing** — SEO retainer (archived in ERP)
 
 ## Related
 
-- See [[Workflow]] for pipeline stages
+- [[Workflow]]

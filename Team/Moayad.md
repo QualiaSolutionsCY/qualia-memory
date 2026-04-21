@@ -1,13 +1,17 @@
-# Moayad
+# Moayad Alqam
 
 **Role:** Employee
-**Company:** [[Index|Qualia Solutions]]
+**Function:** Human Resources
+**Location:** Jordan
+**Email:** moayad@qualiasolutions.net
 **Reports to:** [[Fawzi Goussous]]
 
-## Assigned Tasks
+## Notes
 
+Cyprus + Jordan operations bridge. HR-focused but also takes on design/dev tasks.
+
+## Recent Assignments
+
+- [[Underdog Academy]] — subscription system removal + redesign with Giulio's yellow branding
 - [[Kounouz]] demo — simplify side menu
-- [[Underdog Academy]] — delete subscription system
-- [[Underdog Academy]] — redesign with Giulio's yellow branding
-- Contact [[Rama]] for 2hr meeting
 - Research + blog post: teams using CLIs like Claude Code in 2026

@@ -1,9 +1,9 @@
 # Hasan
 
 **Role:** Employee
-**Company:** [[Index|Qualia Solutions]]
+**Email:** hasan@qualiasolutions.net
 **Reports to:** [[Fawzi Goussous]]
 
 ## Notes
 
-Limited info available — to be filled in as tasks are assigned.
+Active employee. Assignments tracked in [[Qualia ERP]].

@@ -1,24 +1,31 @@
 # Sakani
 
-**Status:** Active
-**Currency:** JOD
+**ERP name:** Sakani — Smart IT Buildings L.L.C.
+**Status:** Active client (hot)
+**Currency:** JOD (contract) / billed in EUR
+**Country:** Jordan (Amman)
+**Email:** sakani@qualiasolutions.cy
 
 ## Projects
 
-- [[Sakani App]] — Mobile app (Expo)
+- [[Sakani App]] — Bilingual AR/EN residential building management platform (Expo + Next.js admin)
 
-## Financial Summary
+## Financial
 
-| Item | Amount (JOD) |
-|------|-------------|
-| Total contract | 12,000 |
-| Invoice 1 (paid) | 3,600 |
-| Invoice 2 (paid) | 3,600 |
-| Total paid | 7,200 |
-| **Remaining** | **4,800** |
+| Item | Amount |
+|------|-------:|
+| **Total contract** | **12,000 JOD** |
+| Billed (EUR equivalent) | €14,520 across 4 invoices |
+| SAKANI-001 (paid 2026-03-17) | €4,356 |
+| SAKANI-002 (paid 2026-04-01) | €4,356 |
+| SAKANI-003 (draft, due 2026-05-01) | €2,904 |
+| SAKANI-004 (draft, due 2026-07-01) | €2,904 |
+| **Paid** | €8,712 |
+| **Remaining** | €5,808 |
 
-- 4 invoices total, 2 paid
+Invoices in EUR for accounting; contract value in JOD.
 
 ## Related
 
-- See [[Finances Overview]]
+- [[Sakani App]]
+- [[Finances Overview]]
