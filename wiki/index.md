@@ -8,6 +8,12 @@ Last refreshed from Qualia ERP + GitHub: **2026-04-21**
 - **AI Expo Conference Cyprus** — Thu 2026-04-23 + Fri 2026-04-24. Speech source: [[wiki/analysis/ai-expo-2026-talking-points]]. Contact: [[wiki/entities/andreas-ai-expo|Andreas]].
 - Geppetto AI demo today 15:00 — [[wiki/entities/arijit-sircar-geppetto|Arijit Sircar]]
 
+## Deep References (long-form, generated 2026-04-22)
+
+- [[wiki/sources/qualia-framework-deep]] — Framework v1 (4.1.0) + v2 (2.7.0) — both active, not deprecated (the v1 page in Projects/ is wrong, fix pending)
+- [[wiki/sources/qualia-erp-deep]] — ERP codebase: 76 tables, 60 action modules, 6 integrations, Phase 10 shipped 2026-04-19
+- [[wiki/sources/qualia-erp-live-snapshot]] — Live Supabase data snapshot 2026-04-22: pipeline, finance, meetings, team activity
+
 ## Analysis (synthesis across the portfolio)
 
 - [[wiki/analysis/qualia-ai-thesis]] — the operating worldview
@@ -123,7 +129,23 @@ AUTOEXCLUSIVE LTD, CARHUB CYPRUS LTD, Π. ΤΖΙΡΩΝΗΣ ΚΑΙ ΣΙΑ Ε.Ε *
 - **Dawadose** — see [[DawaDose]]
 - **Kronospan** — see [[Kronospan]]
 
-## Sources — GitHub Repos (34)
+## GitHub Accounts
+
+Two accounts — they are distinct and the wiki previously conflated them.
+
+### `Qualiasolutions` (personal user account) — 34 repos
+Home of the **internal tools** and **older client projects**:
+- [[qualia-erp]] (live), [[qualia-framework]] (v1, **NOT deprecated** — still at v4.1.0), [[qualiafinal]]
+- Kronospan, Dawadose, Giannino Mayfair, ALKEMY, shai, theranote, theracoach, saydala-pos, carton, chainwise, and 20 more
+
+### `QualiasolutionsCY` (GitHub organization) — 25 repos (+ growing)
+Home of the **current client pipeline** and **newer builds**:
+- USD-Academy, USD-Underdog-Sales, USD-Giulio-Agent, USD-Cold-Calling-Wiki (Giulio stack)
+- vero, sofiatesting, geppetto, bio, Peta, mipantry, marco-osteopata, Giannino-Mayfair, maud, aibossbrainz, znso, aquador, armenius, innrvo, GlluzTech, Glluztech-Axidex, Urban-Catering, jec, Rama-University-Project, **obs** (this vault)
+
+### `SakaniQualia` — 1 repo (sakani)
+
+## Sources — GitHub Repos (34 + new)
 
 ### Internal Tools
 - [[qualia-erp]] — Internal ERP, Next.js 16 + Supabase + VAPI voice AI, live at portal.qualiasolutions.net

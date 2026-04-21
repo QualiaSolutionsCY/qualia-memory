@@ -20,6 +20,20 @@
   - Sources: README.md, CLAUDE.md, PROJECT.md, package.json per repo
   - Updated wiki/index.md with all 34 source entries, categorized
 
+## 2026-04-22
+
+- **DEEP RESEARCH** — 3 parallel agents over Framework, ERP codebase, ERP live data
+  - **Framework (Explore):** produced `wiki/sources/qualia-framework-deep.md` (422 lines). v1 at 4.1.0 (26 skills / 8 agents, full-featured) + v2 at 2.7.0 (lean, team-hardened). **Correction:** v1 is NOT deprecated — both are active, projects choose at init.
+  - **ERP codebase (Explore):** produced `wiki/sources/qualia-erp-deep.md` (376 lines). 76 tables, 60 action modules, 6 integrations (Zoho daily 04:00 UTC, VAPI, GitHub `.planning/` sync, Vercel, Gemini+OpenRouter, Upstash Redis). Phase 10 shipped 2026-04-19 (Cache Components `'use cache'` + god-module split + Redis rate-limiting).
+  - **ERP live snapshot (general-purpose):** produced `wiki/sources/qualia-erp-live-snapshot.md` (210 lines). Surfaced 6 past-due DRAFT invoices totalling ~€7.5k (Craft Bakery x3, ODC Journeys x2, Peta x1), CSC Zyprus INV-0001211 222 days overdue. GSC Underdog Sales = #1 customer (€18.8k across 4 invoices). Dormant surfaces: blog_posts, client_feature_requests, client_invitations, ai_user_memory all empty.
+- **DISCOVERY:** wiki conflated TWO GitHub accounts. Fixed:
+  - `Qualiasolutions` (personal user) — 34 repos, home of qualia-erp, qualia-framework, qualiafinal, and most older client work
+  - `QualiasolutionsCY` (org) — 25 repos, home of current client pipeline + `obs` (this vault)
+  - `SakaniQualia` (org) — 1 repo (sakani)
+- **UPDATED:** `wiki/index.md`, `wiki/hot.md`, `memory/memory.md` — added deep reference pointers, new finance action items, dormant surfaces note, corrected v1 deprecation claim
+
+---
+
 ## 2026-04-21
 
 - **REFRESH** — ERP + GitHub + local checkouts diff'd against 2026-04-16 snapshot
