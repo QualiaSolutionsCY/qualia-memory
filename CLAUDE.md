@@ -6,33 +6,53 @@ This is an Obsidian vault managed by Claude Code using the LLM Wiki pattern (Kar
 
 ## Vault Structure
 
+The vault root **is** this repo (`/home/qualia-new/qualia-memory/`) — there is no `obs/` subfolder. Everything below lives at the repo root.
+
 ```
-obs/
-├── raw/                   # READ-ONLY source material (articles, PDFs, transcripts)
-├── wiki/                  # AI-managed knowledge (you maintain this)
-│   ├── index.md           # Master catalog — read this FIRST for navigation
-│   ├── hot.md             # Recent context cache (~500 words)
-│   ├── log.md             # Append-only operation history
-│   ├── overview.md        # Executive summary of the brain
-│   ├── concepts/          # Ideas, frameworks, methodologies
-│   ├── entities/          # People, orgs, competitors
-│   ├── sources/           # Processed summaries of raw documents
-│   ├── analysis/          # Cross-domain comparisons and patterns
-│   └── meta/
-│       └── dashboard.base # Database dashboard view
-├── memory/                # Personal context layer
-│   ├── soul.md            # AI personality and communication style
-│   ├── user.md            # Fawzi's preferences and goals
-│   ├── memory.md          # Key decisions and lessons (promoted from daily logs)
-│   └── daily_log.md       # Raw session summaries (append-only)
-├── Clients/               # Client profiles (existing)
-├── Projects/              # Project details (existing)
-├── Team/                  # Team member profiles (existing)
-├── Finances/              # Financial overview (existing)
-├── Research/              # Research documents (existing)
-├── _templates/            # Templater templates for note types
-└── Index.md               # Original vault index (existing)
+/home/qualia-new/qualia-memory/
+├── raw/                       # READ-ONLY source material (articles, PDFs, transcripts)
+│   └── sessions/              # Daily Claude Code session logs (auto-captured by SessionEnd hook → flush.py)
+├── _raw/                      # STAGING area for quick captures — wiki-ingest auto-promotes and deletes
+├── wiki/                      # AI-managed knowledge (you maintain this)
+│   ├── index.md               # Master catalog — read this FIRST for navigation
+│   ├── hot.md                 # Recent context cache (~500 words)
+│   ├── log.md                 # Append-only operation history
+│   ├── overview.md            # Executive summary of the brain
+│   ├── concepts/              # Ideas, frameworks, methodologies
+│   ├── entities/              # People, orgs, competitors
+│   ├── sources/               # Processed summaries of raw documents
+│   ├── analysis/              # Cross-domain comparisons and patterns
+│   ├── sessions/              # Cole's compile.py output — separate from human-curated concepts/
+│   │   ├── concepts/          # Auto-compiled concept articles from session logs
+│   │   ├── connections/       # Auto-derived cross-references
+│   │   ├── qa/                # Saved query answers
+│   │   └── index.md           # Cole's own index (do NOT merge with wiki/index.md)
+│   └── _meta/
+│       ├── taxonomy.md        # Canonical tag vocabulary — wiki-lint enforces against this
+│       └── dashboard.base     # Database dashboard view
+├── memory/                    # Personal context layer
+│   ├── soul.md                # AI personality and communication style
+│   ├── user.md                # Fawzi's preferences and goals
+│   ├── memory.md              # Key decisions and lessons (promoted from daily logs)
+│   └── daily_log.md           # Raw session summaries (append-only, manual)
+├── Clients/                   # Operational client pages (human-curated)
+├── Projects/                  # Operational project pages (human-curated)
+├── Team/                      # Team member profiles
+├── Finances/                  # Financial overview
+├── Research/                  # Long-form research documents
+├── _templates/                # Templater templates for note types
+├── .manifest.json             # Delta tracker for wiki-ingest — never edit by hand
+├── Index.md                   # Original Obsidian top-level index (separate from wiki/index.md)
+└── CLAUDE.md                  # You are reading this
 ```
+
+## LLM Wiki framework (installed 2026-04-26)
+
+This vault uses Karpathy's LLM Wiki pattern, with two installed frameworks bridging it to Claude Code:
+
+- **Ar9av/obsidian-wiki** (`~/.local/share/obsidian-wiki/`) — provides `/wiki-update`, `/wiki-query`, `/wiki-ingest`, `/wiki-lint`, `/claude-history-ingest`, etc. Two skills are globally available from any project: `/wiki-update` (push) and `/wiki-query` (pull).
+- **coleam00/claude-memory-compiler** (`~/.local/share/claude-memory-compiler/`) — captures every Claude Code session via `SessionEnd` hook → `~/qualia-memory/raw/sessions/YYYY-MM-DD.md` → after 6 PM Europe/Nicosia, compiles into `~/qualia-memory/wiki/sessions/concepts/`. Config patched to point at this vault; do NOT `git pull` Cole's repo without re-applying the patch (see `~/.claude/projects/-home-qualia-new-qualia-memory/memory/llm_wiki_framework.md`).
+- **`/qualia-recall`** — Qualia-aware bridge skill that reads this vault before any planning command. Triggers on "what do I know about X", "have we done X before".
 
 ## Ingest Workflow
 
