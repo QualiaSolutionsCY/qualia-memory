@@ -2,21 +2,113 @@
   "collapse-filter": false,
   "search": "",
   "showTags": true,
-  "showAttachments": true,
+  "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:wiki/analysis",
+      "color": {
+        "a": 1,
+        "rgb": 15663172
+      }
+    },
+    {
+      "query": "path:wiki/concepts",
+      "color": {
+        "a": 1,
+        "rgb": 52945
+      }
+    },
+    {
+      "query": "path:wiki/entities",
+      "color": {
+        "a": 1,
+        "rgb": 15485081
+      }
+    },
+    {
+      "query": "path:wiki/sources",
+      "color": {
+        "a": 1,
+        "rgb": 16096779
+      }
+    },
+    {
+      "query": "path:wiki/sessions",
+      "color": {
+        "a": 1,
+        "rgb": 9133302
+      }
+    },
+    {
+      "query": "path:wiki",
+      "color": {
+        "a": 1,
+        "rgb": 52945
+      }
+    },
+    {
+      "query": "path:Clients",
+      "color": {
+        "a": 1,
+        "rgb": 1096065
+      }
+    },
+    {
+      "query": "path:Projects",
+      "color": {
+        "a": 1,
+        "rgb": 3900150
+      }
+    },
+    {
+      "query": "path:Team",
+      "color": {
+        "a": 1,
+        "rgb": 15485081
+      }
+    },
+    {
+      "query": "path:Finances",
+      "color": {
+        "a": 1,
+        "rgb": 15381256
+      }
+    },
+    {
+      "query": "path:Research",
+      "color": {
+        "a": 1,
+        "rgb": 16347926
+      }
+    },
+    {
+      "query": "path:memory",
+      "color": {
+        "a": 1,
+        "rgb": 9133302
+      }
+    },
+    {
+      "query": "path:raw",
+      "color": {
+        "a": 1,
+        "rgb": 16096779
+      }
+    }
+  ],
   "collapse-display": false,
-  "showArrow": true,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
+  "showArrow": false,
+  "textFadeMultiplier": 2,
+  "nodeSizeMultiplier": 1.6,
+  "lineSizeMultiplier": 0.85,
   "collapse-forces": false,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.2133333333333333,
-  "close": false
+  "centerStrength": 0.32,
+  "repelStrength": 16,
+  "linkStrength": 0.65,
+  "linkDistance": 220,
+  "scale": 0.14222222222222214,
+  "close": true
 }

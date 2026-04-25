@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a2cf74d551c447c6",
+        "id": "5d6987e0bc19137d",
         "type": "tabs",
         "children": [
           {
-            "id": "09911293f99b3a23",
+            "id": "c49d65fb13d32885",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -198,8 +198,9 @@
       "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "09911293f99b3a23",
+  "active": "c49d65fb13d32885",
   "lastOpenFiles": [
+    "Index.md",
     "Workflow.md",
     "wiki/index.md",
     "wiki/sakani-e2e-onboarding/run-log.md",
@@ -229,7 +230,6 @@
     "Untitled.base",
     "Untitled 2.canvas",
     "2026-04-14.md",
-    "Index.md",
     "wiki/hot.md.tmp.17857.1776131211426",
     "wiki/log.md.tmp.17857.1776131199687",
     "wiki/index.md.tmp.17857.1776131190333",
