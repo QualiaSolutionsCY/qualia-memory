@@ -1,0 +1,64 @@
+/* Graph view — top-notch visual polish.
+ * The graph itself renders to canvas, so node-level CSS doesn't reach it
+ * (color/size live in graph.json). Here we polish everything around the
+ * canvas: the panel, the legend, controls, and the deep-space backdrop. */
+
+/* Deep-space gradient backdrop — gives the graph room to breathe */
+.workspace-leaf-content[data-type="graph"] .view-content {
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(0, 206, 209, 0.08), transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(139, 92, 246, 0.06), transparent 60%),
+    #0a0e12;
+}
+
+/* Color-group legend — pill style, brand-aligned */
+.graph-controls .graph-color-group .setting-item-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #DCE1E6;
+  letter-spacing: 0.01em;
+}
+.graph-controls .graph-color-group {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  margin-bottom: 4px;
+  transition: background 150ms ease;
+}
+.graph-controls .graph-color-group:hover {
+  background: rgba(0, 206, 209, 0.08);
+}
+
+/* Search bar in graph controls — Qualia cyan focus */
+.graph-controls input[type="search"]:focus,
+.graph-controls input[type="text"]:focus {
+  border-color: #00ced1;
+  box-shadow: 0 0 0 2px rgba(0, 206, 209, 0.2);
+  outline: none;
+}
+
+/* Settings sliders — cyan accent */
+.graph-controls .slider-track-active,
+.graph-controls input[type="range"]::-webkit-slider-thumb {
+  background: #00ced1;
+}
+
+/* Right-side controls panel — glass effect */
+.graph-controls {
+  background: rgba(20, 24, 30, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+/* Section headers in the controls panel */
+.graph-controls .tree-item-self.is-clickable {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #DCE1E6;
+  text-transform: uppercase;
+  font-size: 10px;
+  opacity: 0.7;
+}

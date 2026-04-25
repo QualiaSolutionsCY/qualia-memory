@@ -4,53 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "2e0b3cc12640b292",
+        "id": "a2cf74d551c447c6",
         "type": "tabs",
         "children": [
           {
-            "id": "3e0257161f162d1e",
+            "id": "09911293f99b3a23",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wiki/index.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
-            "id": "ccaac44d1cfc69d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/Qualia Framework.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Qualia Framework"
-            }
-          },
-          {
-            "id": "fb36508e071f83d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/Qualia ERP.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Qualia ERP"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +65,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#speech",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -109,12 +76,12 @@
               "title": "Search"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "8e0593bec660e321",
@@ -205,8 +172,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -214,7 +181,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -224,31 +192,37 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false,
+      "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "fb36508e071f83d9",
+  "active": "09911293f99b3a23",
   "lastOpenFiles": [
+    "Workflow.md",
+    "wiki/index.md",
+    "wiki/sakani-e2e-onboarding/run-log.md",
+    "CLAUDE.md",
+    "wiki/entities/andreas-ai-expo.md",
+    "wiki/sakani-e2e-onboarding/scope-boundary.md",
+    "Projects/Qualia Framework.md",
+    "Projects/Qualia ERP.md",
     "Team/Rama.md",
     "Team/Fawzi Goussous.md",
     "Projects/Qualia Dashboard.md",
-    "Projects/Qualia ERP.md",
     "Projects/Qualia Framework v2.md",
     "Team/Hasan.md",
     "Research/SPEC.md",
     "Research/SUPERPOWERS.md",
-    "Projects/Qualia Framework.md",
     "wiki/sources/qualia-framework.md",
-    "wiki/index.md",
     "Qualia Solutions.md",
     "wiki/sakani-e2e-onboarding/README.md",
     "Untitled 2.base",
     "2026-04-17.md",
     "Untitled 3.canvas",
-    "wiki/sakani-e2e-onboarding/run-log.md",
     "Projects/Sakani App.md",
     "Clients/Sakani.md",
-    "wiki/sakani-e2e-onboarding/scope-boundary.md",
     "Abdellah Pharmacy.md",
     "Team/Moayad.md",
     "Untitled 1.base",
@@ -261,11 +235,8 @@
     "wiki/index.md.tmp.17857.1776131190333",
     "wiki/sources/haamah.md",
     "wiki/sources/haamah.md.tmp.17857.1776131130731",
-    "wiki/sources/pastrikos-solar-demo.md",
     "wiki/sources/pastrikos-solar-demo.md.tmp.17857.1776131119921",
-    "wiki/sources/sallydababaneh-finance.md",
     "wiki/sources/sallydababaneh-finance.md.tmp.17857.1776131109122",
-    "wiki/sources/alfaman.md",
     "wiki/sources/alfaman.md.tmp.17857.1776131102368",
     "Untitled 1.canvas",
     "Untitled.canvas"
