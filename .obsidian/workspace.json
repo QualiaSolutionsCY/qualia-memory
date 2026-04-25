@@ -205,8 +205,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           }
         ],
@@ -224,9 +224,7 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "bases:Create new base": false
     }
   },
   "active": "fb36508e071f83d9",
