@@ -77,3 +77,4 @@
   - **Created — Projects (8):** Aquador, Marco Osteopata, Aifred, Qualia Dashboard, Qualiafinal, Tomas, Underdog, Sigatalachana AI Agent, Alexis AI
   - **Refreshed:** wiki/index.md, wiki/hot.md, memory/memory.md
   - **Source queries reproducible:** see `Finances/Overview.md` footer for ERP REST URL pattern
+- [2026-04-26T02:07:28+0400] QUERY query="voice agents and projects delivered" result_pages=6 mode=index_only escalated=false
