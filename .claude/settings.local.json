@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(mkdir -p /home/qualia/.claude/scripts)",
-      "Read(//home/qualia/.claude/scripts/**)"
+      "Read(//home/qualia/.claude/scripts/**)",
+      "Bash(rm /home/qualia-new/qualia-memory/raw/sessions/2026-04-26.md)",
+      "Bash(cp /home/qualia-new/.claude/settings.json /home/qualia-new/.claude/settings.json.bak.before-llm-wiki)",
+      "Read(//home/qualia-new/.claude/**)",
+      "Bash(python3 -c \"import json; s = json.load\\(open\\('/home/qualia-new/.claude/settings.json'\\)\\); print\\(json.dumps\\(s.get\\('hooks', {}\\).get\\('SessionEnd', '\\(none\\)'\\), indent=2\\)\\)\")"
     ]
   }
 }
