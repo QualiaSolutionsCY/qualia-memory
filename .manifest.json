@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "vault_path": "/home/qualia-new/qualia-memory",
+  "created": "2026-04-26",
+  "description": "Delta tracker for wiki-ingest. Records every source that has been processed, when, and which wiki pages it produced. wiki-ingest computes the delta on each run so only new or changed sources are re-processed.",
+  "sources": {}
+}
