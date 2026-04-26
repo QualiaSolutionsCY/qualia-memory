@@ -9,16 +9,16 @@
 
 ## Projects
 
-| Project | Type | Status | Revenue |
-|---------|------|--------|--------:|
-| [[Boss Brainz]] | Voice/AI agent | Active retainer | 1,700/mo (→ 2,500/mo May 2026) |
-| [[Underdog Academy]] | Web platform (ai_platform) | Active — Webflow→Next.js migration in progress | — |
-| [[Cold Calling Wiki]] | Web | Done | €1,000 one-time |
-| [[Aifred]] (Alfred / Giulio Agent) | AI agent | Active — single-admin sales tool | — |
-| [[Underdog]] (Underdog Sales website) | AI agent | Done | — |
-| [[AI Sales Coach]] | Web | Done | — |
-| Glluztech | Web | Done | — |
-| Giulio Orchestractor | Pre-production | Demo-stage | — |
+| Project                               | Type                       | Status                                         |                        Revenue |
+| ------------------------------------- | -------------------------- | ---------------------------------------------- | -----------------------------: |
+| [[Boss Brainz]]                       | Voice/AI agent             | Active retainer                                | 1,700/mo (→ 2,500/mo May 2026) |
+| [[Underdog Academy]]                  | Web platform (ai_platform) | Active — Webflow→Next.js migration in progress |                              — |
+| [[Cold Calling Wiki]]                 | Web                        | Done                                           |                €1,000 one-time |
+| [[Aifred]] (Alfred / Giulio Agent)    | AI agent                   | Active — single-admin sales tool               |                              — |
+| [[Underdog]] (Underdog Sales website) | AI agent                   | Done                                           |                              — |
+| [[AI Sales Coach]]                    | Web                        | Done                                           |                              — |
+| Glluztech                             | Web                        | Done                                           |                              — |
+| Giulio Orchestractor                  | Pre-production             | Demo-stage                                     |                              — |
 
 ## Active Work
 

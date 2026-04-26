@@ -11,14 +11,10 @@
             "id": "c49d65fb13d32885",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Team/Fawzi Goussous.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Fawzi Goussous"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -69,8 +65,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#speech",
-                "matchingCase": false,
+                "query": "tag:#repo",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -202,8 +198,12 @@
       "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "c49d65fb13d32885",
+  "active": "b1b5588c60884b73",
   "lastOpenFiles": [
+    "Clients/Giulio - Underdogsales.md",
+    "Projects/Underdog Academy.md",
+    "Projects/Aifred.md",
+    "Team/Fawzi Goussous.md",
     "Projects/Qualia ERP.md",
     "Workflow.md",
     "Sofia.md",
@@ -218,7 +218,6 @@
     "wiki/sakani-e2e-onboarding/scope-boundary.md",
     "Projects/Qualia Framework.md",
     "Team/Rama.md",
-    "Team/Fawzi Goussous.md",
     "Projects/Qualia Dashboard.md",
     "Projects/Qualia Framework v2.md",
     "Team/Hasan.md",
@@ -228,10 +227,7 @@
     "Qualia Solutions.md",
     "wiki/sakani-e2e-onboarding/README.md",
     "Untitled 2.base",
-    "2026-04-17.md",
     "Untitled 3.canvas",
-    "Projects/Sakani App.md",
-    "Clients/Sakani.md",
     "Untitled 1.base",
     "Untitled.base",
     "Untitled 2.canvas",
