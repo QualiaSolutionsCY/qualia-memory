@@ -82,3 +82,48 @@
 - New sessions since last compile: Session 20:37 (Portal MCP server build — 6 read + 3 write tools, admin token panel, security audit with 3 HIGH/1 MEDIUM/1 LOW, hardening shipped)
 - Coverage: All 18 sessions + 11 memory flush events now accounted for across 13 concept articles, 3 connection articles, and 3 deprecated markers
 - Daily log fully compiled — session 20:37 was the final uncaptured session
+
+## [2026-04-27T18:11:20+04:00] compile | Daily Log 2026-04-27
+- Source: daily/2026-04-27.md
+- Articles created: [[concepts/video-poster-preload-patterns]], [[concepts/supabase-client-access-patterns]], [[concepts/erp-clock-out-name-mismatch]], [[concepts/verification-contract-gaps]], [[concepts/vercel-deploy-patterns]]
+- Connections created: [[connections/data-identity-mismatches]]
+- Articles updated: [[concepts/qualia-portal-employee-workflows]] (added Moayad hardcoded daily research entry, activity checkboxes removed, clock-out bug cross-reference), [[concepts/claude-code-operational-gotchas]] (added git rebase silent revert gotcha)
+- Sessions processed: 7 substantive (01:50, 03:45, 03:50, 04:13 x2, 08:38, 17:21+17:30) + 10 memory flushes (8 FLUSH_OK, 2 FLUSH_ERROR)
+- Concepts extracted: 5 new concept articles, 1 new connection article, 2 articles updated
+- Coverage: 18 concept articles, 4 connection articles, 3 deprecated markers total across both daily logs
+
+## [2026-04-27T18:16:44+04:00] compile | Daily Log 2026-04-27 (incremental)
+- Source: daily/2026-04-27.md
+- Articles created: (none)
+- Articles updated: [[concepts/memory-loop-architecture]] (added day-2 flush stats: 10 FLUSH_OK + 2 FLUSH_ERROR = ~17% error rate, down from ~45% on day 1)
+- Index updated: memory-loop-architecture entry now reflects daily/2026-04-27.md as additional source
+- Coverage: 18 concept articles, 4 connection articles, 3 deprecated markers total — all 2026-04-27 sessions fully compiled
+
+## [2026-04-27T23:30:00+04:00] compile | Daily Log 2026-04-27 (incremental #2)
+- Source: daily/2026-04-27.md
+- Articles created: [[concepts/urban-catering-design-transformation]] (editorial design patterns: white/cream/navy palette, Playfair Display, numbered services, light-gradient hero, minimal ScrollNav dots, `/qualia-design` one-shot workflow)
+- Articles updated: [[concepts/memory-loop-architecture]] (corrected day-2 flush count from 12→13, error count from 2→3 — added missing 18:18 FLUSH_ERROR, error rate corrected from ~17%→~23%)
+- Index updated: added urban-catering-design-transformation entry, corrected memory-loop-architecture summary
+- Coverage: 19 concept articles, 4 connection articles, 3 deprecated markers total — all 2026-04-27 sessions fully compiled including previously uncaptured Urban Catering design session
+
+## [2026-04-28T01:30:00+04:00] compile | Daily Log 2026-04-27 (incremental #3)
+- Source: daily/2026-04-27.md
+- Articles created: [[concepts/underdog-sales-webinar-system]] (Zoom webinar + Brevo + Supabase edge function registration system; 7-vector e2e smoke test; Vercel `--prebuilt` deploy workaround)
+- Articles updated: [[concepts/vercel-deploy-patterns]] (added Vercel Marketplace integration provisioning bug: "Blocked" / "Provisioning integrations failed" since ~Apr 21 on qualiasolutionscy team; `--prebuilt` workaround; permanent fix requires support ticket)
+- New sessions since last compile: Session 18:30 (Underdog Sales Academy webinar deployment — Zoom ID 84224264035, May 5 2026 18:00 Cyprus, 8 Supabase secrets, Brevo email integration, secret rotation reminder)
+- Coverage: 20 concept articles, 4 connection articles, 3 deprecated markers total — all 2026-04-27 sessions now fully compiled
+
+## [2026-04-27T19:19:03+04:00] compile | Daily Log 2026-04-27 (incremental #4)
+- Source: daily/2026-04-27.md
+- Articles created: (none)
+- Articles updated: [[concepts/underdog-sales-webinar-system]] (added CSP hotfix for Supabase edge functions, RSVP form simplification, forced deploy, JSON-LD safety audit, remaining CSP warnings), [[concepts/claude-code-operational-gotchas]] (added Turbopack stale `.next` directory gotcha)
+- New sessions since last compile: Session 19:19 (UnderdogSales CSP hotfix — `connect-src` missing Supabase edge function URL, form field merge, Turbopack stale cache)
+- Coverage: 20 concept articles, 4 connection articles, 3 deprecated markers total — Session 19:19 (Sophia lead-routing) still uncompiled
+
+## [2026-04-28T02:00:00+04:00] compile | Daily Log 2026-04-27 (incremental #5)
+- Source: daily/2026-04-27.md
+- Articles created: [[concepts/sophia-lead-routing-debug]] (truthy-object trap swallowing failed Telegram forward, /start requirement, Supabase log eventual consistency, Evelina zero lifetime leads since Jan 11, defensive webhook fix)
+- Connections created: [[connections/silent-failure-swallowing]] (expands data-identity-mismatches pattern to include routing-logic swallowing via truthy-object checks)
+- Articles updated: [[concepts/underdog-sales-webinar-system]] (added sophia cross-reference), [[concepts/claude-code-operational-gotchas]] (added sophia cross-reference for Supabase log eventual consistency), [[connections/data-identity-mismatches]] (added link to new silent-failure-swallowing connection)
+- New sessions since last compile: Session 19:19 (Sophia Telegram lead-routing debug — Lauren flagged dropped Paphos lead, two compounding bugs: Evelina never /started bot + truthy-object swallowing in lead-router.ts:482-496)
+- Coverage: 21 concept articles, 5 connection articles, 3 deprecated markers total — all 2026-04-27 sessions now fully compiled

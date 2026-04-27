@@ -4,8 +4,9 @@ aliases: [memory-loop, auto-capture-loop, karpathy-wiki-loop]
 tags: [memory, architecture, qualia-framework, knowledge-management]
 sources:
   - "daily/2026-04-26.md"
+  - "daily/2026-04-27.md"
 created: 2026-04-26
-updated: 2026-04-26
+updated: 2026-04-27
 ---
 
 # Memory Loop Architecture
@@ -32,6 +33,8 @@ The Obsidian vault at `~/qualia-memory/` serves as the human-readable interface 
 
 On the first day of operation (2026-04-26), the flush pipeline produced mixed results: several `FLUSH_OK` no-ops (expected when sessions had nothing worth saving), but also five `FLUSH_ERROR` entries (at 03:57, 18:40, 18:45, 19:01, and 19:45) with `exit code 1`. The errors occurred without detailed stderr output, suggesting the Claude Agent SDK call itself failed rather than the extraction logic. The 45% error rate on day one (5 errors out of 11 flush attempts) indicates that error reporting needs improvement to diagnose SDK-level failures, though the core architecture is sound — graceful no-op on empty input works, and the idempotent dedup guards prevent data corruption even when flushes fail. The same idempotent dedup pattern used here is also applied in the [[concepts/qualia-portal-employee-workflows|ERP's employee task automation]].
 
+On day two (2026-04-27), the flush pipeline showed improvement: 10 `FLUSH_OK` and 3 `FLUSH_ERROR` out of 13 total attempts, bringing the error rate down to ~23% (from ~45% on day one). The three errors (at 08:38, 18:11, and 18:18) still produced only generic `exit code 1` without detailed stderr, but the overall reliability trend is positive. The higher volume of successful no-ops (sessions that produced nothing worth saving) confirms the flush correctly triages low-value sessions without wasting API calls. The day-over-day improvement suggests that either the Claude Agent SDK connection became more stable or that the flush process's retry/timeout behavior settled into a steady state.
+
 ## Related Concepts
 
 - [[concepts/qualia-framework-v4.3.0-release]] — The release that shipped the complete memory loop
@@ -43,3 +46,4 @@ On the first day of operation (2026-04-26), the flush pipeline produced mixed re
 
 - [[daily/2026-04-26.md]] — Sessions at 02:06 (full loop described), 02:31 (cost analysis of deep-mine), 03:32 (Obsidian configuration and 3-loop model explanation), 03:57 (flush error)
 - [[daily/2026-04-26.md]] — Memory flushes at 03:57, 18:40, 18:45, 19:01, 19:45 (FLUSH_ERROR with exit code 1); 16:36, 16:37 x2, 18:40, 19:19, 19:39 (FLUSH_OK — nothing worth saving)
+- [[daily/2026-04-27.md]] — Memory flushes: 10 FLUSH_OK (02:08, 03:50, 03:53 x2, 04:13 x2, 08:38, 08:53, 15:48, 18:16), 3 FLUSH_ERROR (08:38, 18:11, 18:18) — error rate improved from ~45% to ~23%

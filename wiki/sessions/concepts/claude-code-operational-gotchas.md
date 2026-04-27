@@ -4,13 +4,14 @@ aliases: [claude-code-gotchas, session-gotchas, hook-gotchas]
 tags: [claude-code, operational, gotchas, hooks]
 sources:
   - "daily/2026-04-26.md"
+  - "daily/2026-04-27.md"
 created: 2026-04-26
-updated: 2026-04-26
+updated: 2026-04-27
 ---
 
 # Claude Code Operational Gotchas
 
-A collection of non-obvious operational pitfalls discovered while using Claude Code in production across the Qualia ecosystem on 2026-04-26. These are tool-level behaviors that don't fit neatly into any single feature article but repeatedly cause friction if not anticipated.
+A collection of non-obvious operational pitfalls discovered while using Claude Code in production across the Qualia ecosystem. These are tool-level behaviors that don't fit neatly into any single feature article but repeatedly cause friction if not anticipated.
 
 ## Key Points
 
@@ -21,6 +22,8 @@ A collection of non-obvious operational pitfalls discovered while using Claude C
 - **Obsidian graph.json race:** Obsidian holds graph configuration in memory and flushes to disk when the graph view closes — external edits to `graph.json` are silently overwritten if the graph tab is open
 - **`next build` zombie processes:** `next build` can leave zombie processes that hold ports and block subsequent Vercel deploys — kill stale `next build` PIDs before retrying `vercel --prod`
 - **Framework state drift:** When `.planning/` bookkeeping drifts (missing `tracking.json`, `JOURNEY.md`, stale `STATE.md`), `state.js` returns `NO_PROJECT` and framework commands fail — bootstrap state manually first, then commands work going forward
+- **Git rebase silently reverts fixes:** During deploy, rebasing against upstream can silently drop committed fixes if upstream redesigned the same files — always verify changes survived after rebase before shipping
+- **Turbopack stale `.next` directory:** Dev server can fail with permission errors if `.next/` is stale from a previous build — clearing it (`rm -rf .next`) fixes it immediately; common after switching branches or interrupted builds
 
 ## Details
 
@@ -34,12 +37,18 @@ The `next build` zombie process issue was discovered during the claude-memory-co
 
 Framework state drift was encountered in the same session when the claude-memory-compiler project's `.planning/` directory had fallen out of sync: `tracking.json` was missing entirely, `JOURNEY.md` didn't exist, and `STATE.md` was stale by approximately one day. The framework's `state.js` router returned `NO_PROJECT`, which meant all `/qualia-*` commands would either fail or misroute. Rather than running `/qualia-milestone` (which would have failed due to missing prerequisites), the solution was to bootstrap all state files manually — creating `tracking.json`, writing `JOURNEY.md`, updating `STATE.md` — after which framework commands functioned normally. The lesson: when bookkeeping files drift, don't force framework commands that expect valid state; reconstruct the state first.
 
+The git rebase gotcha was discovered on 2026-04-27 during a deploy of video loading fixes to qualiasolutions.net/work. A fix to `DeviceMockup3D.tsx` (removing the `opacity: ready ? 1 : 0` pattern) was committed and verified locally, but a subsequent `git rebase` against upstream silently dropped the fix because upstream had redesigned the same file. The fix had to be re-verified and re-applied after the rebase. The practical rule: after any rebase during a deploy pipeline, explicitly verify (`git diff`) that all intended changes survived — especially when upstream has been actively editing the same components.
+
+The Turbopack stale `.next` directory issue was discovered on 2026-04-27 during the UnderdogSales webinar hotfix session. The Next.js dev server failed to start with permission errors, caused by a stale `.next/` directory left over from a previous build (possibly a different branch or an interrupted `next build`). Deleting `.next/` entirely (`rm -rf .next`) and restarting the dev server resolved it immediately. This is a common issue with Turbopack's incremental compilation cache — when the cache becomes inconsistent (branch switches, interrupted builds, or permission changes), the dev server can fail cryptically rather than regenerating the cache. The fix is always the same: delete `.next/` and restart.
+
 ## Related Concepts
 
 - [[concepts/memory-loop-architecture]] — Where the ENOENT hook bug and CronCreate limitation were discovered in production
 - [[concepts/llm-wiki-infrastructure]] — Where the CronCreate auto-expiry and Obsidian graph.json race were documented
 - [[concepts/qualia-framework-v4.3.0-release]] — The release cycle that exposed multiple hook-related gotchas
 - [[concepts/npm-vulnerability-triage]] — The vuln sweep session where `next build` zombies and framework state drift were discovered
+- [[concepts/underdog-sales-webinar-system]] — Where the Turbopack stale `.next` directory issue was discovered during a hotfix session
+- [[concepts/sophia-lead-routing-debug]] — Supabase edge function log eventual consistency was discovered during this debugging session
 
 ## Sources
 
@@ -50,3 +59,5 @@ Framework state drift was encountered in the same session when the claude-memory
 - [[daily/2026-04-26.md]] — Session at 03:52: Obsidian graph.json overwritten when graph tab is open
 - [[daily/2026-04-26.md]] — Session at 19:20: `next build` zombie processes blocking Vercel deploys
 - [[daily/2026-04-26.md]] — Session at 19:20: Framework state drift — `tracking.json` missing, `JOURNEY.md` absent, `state.js` returning `NO_PROJECT`
+- [[daily/2026-04-27.md]] — Session at 01:50: Git rebase during deploy silently reverted video fix — fix had to be re-verified after rebase
+- [[daily/2026-04-27.md]] — Session at 19:19: Turbopack stale `.next` directory caused dev server permission errors — `rm -rf .next` fixed it
