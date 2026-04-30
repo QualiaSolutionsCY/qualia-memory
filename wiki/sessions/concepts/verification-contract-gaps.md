@@ -4,8 +4,9 @@ aliases: [db-smoke-test, builder-sandbox-limits, plan-checker-revision, verifica
 tags: [qualia-framework, verification, methodology, supabase, builder-agents]
 sources:
   - "daily/2026-04-27.md"
+  - "daily/2026-04-28.md"
 created: 2026-04-27
-updated: 2026-04-27
+updated: 2026-04-28
 ---
 
 # Verification Contract Gaps
@@ -32,6 +33,8 @@ The plan-checker's revision loop proved effective: three of four phase plans nee
 
 Region recommendation for the Kids Festive Supabase project was `eu-central-1` (Frankfurt) — closest to Cyprus and matching Vercel's default region for optimal latency. The project would cost approximately $10/month on Pro tier.
 
+**Update (2026-04-28):** Kids Festive M2 (Marketing+CMS) was successfully shipped to production, completing content seeding, Resend wiring, admin user setup, and a full deploy pipeline verified at `kidsfestive-lswhjx5k1-qualiasolutionscy.vercel.app`. The session also produced 17 feature commits across 7 phases and 2 milestones. However, a new verification gap emerged: after M2 shipped, the user invoked `/qualia-handoff` prematurely despite M3 (Commerce) and M4 (Handoff) still remaining. The framework's state machine suggested handoff as the next command because it's the only post-shipped state transition, but JOURNEY.md clearly defines 4 milestones. This is documented as a state-routing gotcha in [[concepts/claude-code-operational-gotchas]].
+
 ## Related Concepts
 
 - [[concepts/qualia-erp-phase-25]] — Demonstrated the same lesson from the other direction: RPC functions existed as local migrations but weren't pushed to production Supabase
@@ -45,3 +48,4 @@ Region recommendation for the Kids Festive Supabase project was `eu-central-1` (
 - [[daily/2026-04-27.md]] — Session at 04:13 (Kids Festive): "Plan-checker caught issues in P1/P2/P4 on first pass but all resolved in one revision cycle"
 - [[daily/2026-04-27.md]] — Session at 04:13 (Kids Festive): "'eventmaster' Supabase project is NOT Kids Festive — it's a separate project (cities/vendors/listings)"
 - [[daily/2026-04-27.md]] — Session at 04:13 (Kids Festive): "Region recommendation: eu-central-1 (Frankfurt) — closest to Cyprus + Vercel default"
+- [[daily/2026-04-28.md]] — Session at 11:59: "M2 shipped to production; user invoked `/qualia-handoff` prematurely — 2 milestones remain (M3 Commerce, M4 Handoff)"

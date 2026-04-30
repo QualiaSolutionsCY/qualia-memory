@@ -4,8 +4,9 @@ aliases: [underdog-webinar, underdogsales-webinar, zoom-webinar-integration, bre
 tags: [underdog-sales, zoom, brevo, supabase, edge-functions, deployment, webinar, csp, security]
 sources:
   - "daily/2026-04-27.md"
+  - "daily/2026-04-29.md"
 created: 2026-04-27
-updated: 2026-04-27
+updated: 2026-04-29
 ---
 
 # Underdog Sales Webinar Registration System
@@ -20,6 +21,7 @@ A production webinar registration system deployed to underdogsales.com/webinar o
 - **Navigation hidden on webinar pages:** Header hidden on `/webinar` and `/webinar/thank-you` using the same pattern as `/individuals` — focused conversion flow without site chrome
 - **CSP hotfix required post-launch:** The RSVP form was silently blocked in production because the Supabase edge function URL (`https://*.supabase.co`) was not in the Content Security Policy's `connect-src` directive — CSP must be revisited whenever new external service integrations are added to a site
 - **Secret rotation needed:** Zoom Client Secret was shared in chat during the session — must be rotated via `npx supabase secrets set` after rotating in Zoom Marketplace
+- **Post-launch signup breakage (2026-04-29):** Four stacked bugs broke the signup flow after prior session's changes — env var build-time baking, Supabase JWT key format, Brevo transactional merge tag resolution, and incorrect sender address; each fix revealed the next
 
 ## Details
 
@@ -39,13 +41,19 @@ The `dangerouslySetInnerHTML` usage for JSON-LD structured data via `JSON.string
 
 The deploy process itself was notable because the standard `vercel --prod` command has been broken on the `qualiasolutionscy` Vercel team since approximately April 21, 2026. Every deploy attempt returns "Blocked" with `readyStateReason: "Provisioning integrations failed"`, caused by a Vercel Marketplace bug when provisioning integrated services (Supabase, Groq, Upstash, Neon). The workaround — `vercel build && vercel deploy --prebuilt --prod` — builds locally and uploads the prebuilt output, skipping the server-side integration provisioning step entirely. This affects all projects on the team, not just Underdog Sales. See [[concepts/vercel-deploy-patterns]] for the broader Vercel deploy gotcha catalog.
 
+On 2026-04-29, the webinar signup flow broke again ahead of an ad launch. Debugging revealed four stacked bugs, each masking the next: (1) `NEXT_PUBLIC_SUPABASE_URL` had been updated but `vercel redeploy` reused the old build artifact — `NEXT_PUBLIC_*` env vars are baked at build time, so only a fresh `vercel --prod` build picks up new values. (2) The Supabase anon key had been swapped to the newer `sb_publishable_*` format, but Edge Functions don't accept it — they require the classic JWT-format `eyJ...` key. (3) Once the function was reachable, confirmation emails arrived with raw `{{ contact.FIRSTNAME }}` placeholders because Brevo's transactional `/smtp/email` endpoint doesn't resolve merge tags from templates — only campaign sends do. The fix was switching from `templateId` to inline HTML for the transactional confirmation email. (4) The sender address was `support@underdogsales.com` but the correct address is `gsc@underdogsales.com`. See [[concepts/brevo-transactional-vs-campaign]] for the full Brevo analysis.
+
+Additionally, the sprint popup (a promotional overlay) was excluded from `/webinar/*` paths to avoid distracting from the RSVP conversion flow, following the same focused-conversion pattern as hiding the navigation on webinar pages.
+
 ## Related Concepts
 
-- [[concepts/vercel-deploy-patterns]] — The `--prebuilt` workaround for broken integration provisioning was discovered and documented during this deploy
+- [[concepts/vercel-deploy-patterns]] — The `--prebuilt` workaround for broken integration provisioning was discovered and documented during this deploy; the `NEXT_PUBLIC_*` build-time baking gotcha was discovered during the 2026-04-29 debugging
 - [[concepts/supabase-client-access-patterns]] — Supabase edge function secrets and RLS patterns apply to the registration backend
 - [[concepts/qualia-portal-mcp-server]] — Another system using Supabase secrets for API authentication; same secret management discipline applies
 - [[concepts/claude-code-operational-gotchas]] — Turbopack stale `.next` directory issue was discovered during this project's hotfix session
 - [[concepts/sophia-lead-routing-debug]] — Another Supabase edge function deployment on the same day; both required post-deploy debugging
+- [[concepts/brevo-transactional-vs-campaign]] — The Brevo merge tag distinction discovered during the 2026-04-29 debugging; transactional sends require inline HTML, not templateId with merge tags
+- [[connections/supabase-tooling-escape-hatches]] — Supabase Edge Function JWT key format requirement is another instance of standard tooling silently failing
 
 ## Sources
 
@@ -57,3 +65,7 @@ The deploy process itself was notable because the standard `vercel --prod` comma
 - [[daily/2026-04-27.md]] — Session at 19:19: "CSP errors blocking the RSVP form submission in production — Supabase edge function URL was not in the CSP `connect-src` directive"
 - [[daily/2026-04-27.md]] — Session at 19:19: "Merged first/last name into a single 'Your Name' field, splitting on whitespace at submit time"
 - [[daily/2026-04-27.md]] — Session at 19:19: "Shipped as forced hotfix (`--force`) since the project wasn't in the Qualia `polished` state"
+- [[daily/2026-04-29.md]] — Session at 20:24: "4 stacked bugs: NEXT_PUBLIC env var baking, Supabase JWT key format, Brevo transactional merge tags, incorrect sender address"
+- [[daily/2026-04-29.md]] — Session at 20:24: "Switched from Brevo `templateId` to inline HTML for transactional confirmation email"
+- [[daily/2026-04-29.md]] — Session at 20:24: "Supabase Edge Functions require JWT-format anon key — `sb_publishable_*` format not accepted"
+- [[daily/2026-04-29.md]] — Session at 20:24: "Replaced `support@underdogsales.com` with `gsc@underdogsales.com` across user-facing copy"

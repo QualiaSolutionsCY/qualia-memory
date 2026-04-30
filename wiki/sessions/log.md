@@ -127,3 +127,92 @@
 - Articles updated: [[concepts/underdog-sales-webinar-system]] (added sophia cross-reference), [[concepts/claude-code-operational-gotchas]] (added sophia cross-reference for Supabase log eventual consistency), [[connections/data-identity-mismatches]] (added link to new silent-failure-swallowing connection)
 - New sessions since last compile: Session 19:19 (Sophia Telegram lead-routing debug — Lauren flagged dropped Paphos lead, two compounding bugs: Evelina never /started bot + truthy-object swallowing in lead-router.ts:482-496)
 - Coverage: 21 concept articles, 5 connection articles, 3 deprecated markers total — all 2026-04-27 sessions now fully compiled
+
+## [2026-04-27T21:48:19+04:00] compile | Daily Log 2026-04-27 (incremental #6)
+- Source: daily/2026-04-27.md
+- Articles created: (none)
+- Articles updated: [[concepts/memory-loop-architecture]] (corrected day-2 flush count from 13→17: added 4 late-evening FLUSH_OK at 19:30 x2, 19:38, 21:48; error rate corrected from ~23%→~18%)
+- New events since last compile: 4 FLUSH_OK entries (19:30 x2, 19:38, 21:48) — all clean no-ops
+- Coverage: 21 concept articles, 5 connection articles, 3 deprecated markers total
+
+## [2026-04-27T22:01:08+04:00] compile | Daily Log 2026-04-27 (incremental #7 — final)
+- Source: daily/2026-04-27.md
+- Articles created: (none)
+- Articles updated: [[concepts/memory-loop-architecture]] (added 22:01 FLUSH_OK; day-2 flush count corrected from 17→18, OK count from 14→15, error rate from ~18%→~17%)
+- New events since last compile: Memory flush at 22:01 (FLUSH_OK — nothing worth saving)
+- Coverage: 21 concept articles, 5 connection articles, 3 deprecated markers total — daily/2026-04-27.md fully compiled, no remaining gaps
+
+## [2026-04-28T18:32:17+04:00] compile | Daily Log 2026-04-28
+- Source: daily/2026-04-28.md
+- Articles created: [[concepts/supabase-cross-project-migration]], [[concepts/postgres-security-definer-triage]], [[concepts/fotini-ai-legal-platform]], [[concepts/eventmaster-design-pivots]]
+- Connections created: [[connections/supabase-tooling-escape-hatches]]
+- Articles updated: [[concepts/claude-code-operational-gotchas]] (added Supabase CLI migration drift, MCP query size limits, premature handoff state routing), [[concepts/memory-loop-architecture]] (added day-3 flush stats: 7 OK / 5 ERR = ~42% error rate regression), [[concepts/verification-contract-gaps]] (added Kids Festive M2 shipped, premature handoff discovery)
+- Sessions processed: 7 substantive (10:49, 11:59, 12:23, 13:56, 15:22, 17:00, 17:23) + 12 memory flushes (7 FLUSH_OK, 5 FLUSH_ERROR)
+- Concepts extracted: 4 new concept articles, 1 new connection article, 3 articles updated
+- Coverage: 25 concept articles, 6 connection articles, 3 deprecated markers total across all daily logs
+
+## [2026-04-28T18:42:29+04:00] compile | Daily Log 2026-04-28 (incremental)
+- Source: daily/2026-04-28.md
+- Articles created: (none)
+- Articles updated: [[concepts/memory-loop-architecture]] (added 18:42 FLUSH_ERROR; day-3 flush count corrected from 12→13, error count from 5→6, error rate from ~42%→~46%)
+- New events since last compile: Memory flush at 18:42 (FLUSH_ERROR with exit code 1)
+- Coverage: 25 concept articles, 6 connection articles, 3 deprecated markers total — daily/2026-04-28.md fully compiled
+
+## [2026-04-28T22:30:00+04:00] compile | Daily Log 2026-04-28 (incremental #2)
+- Source: daily/2026-04-28.md
+- Articles created: [[concepts/qualia-framework-v4.4.0-release]] (plan-contract validator, agent-runs tracking, CLI agents subcommand, zero-dep substrate, shell metacharacter validation, spec-then-build workflow)
+- Articles updated: [[concepts/claude-code-operational-gotchas]] (added Vercel env var caching gotcha — OpenRouter key rotation requires explicit `vercel env rm` + `vercel env add`, not just provider-side rotation)
+- New sessions since last compile: Session 21:15 (Qualia Framework v4.4.0 build — plan-contract.js, agent-runs.js, CLI agents subcommand, 301kB tarball, npm publish blocked by 2FA)
+- Also extracted: Vercel env var caching gotcha from session 10:49 (was processed but this detail was not extracted in initial compile)
+- Coverage: 26 concept articles, 6 connection articles, 3 deprecated markers total — daily/2026-04-28.md fully compiled including all sessions and memory flushes
+
+## [2026-04-28T23:30:00+04:00] compile | Daily Log 2026-04-28 (incremental #3 — final)
+- Source: daily/2026-04-28.md
+- Articles created: (none)
+- Articles updated: [[concepts/qualia-framework-v4.4.0-release]] (corrected npm publish status from "blocked" to "succeeded"; added PR #17 merged at `8f1a930`, tagged `v4.4.0`, 226 tests/5 suites, v4.5.0 scope defined as skill wiring, hardening items shipped)
+- New sessions since last compile: Session 21:29 (v4.4.0 shipped — npm publish succeeded on first attempt, 403 on retry confirming live; PR #17 merged; v4.5.0 scope = planner/builder/verifier skill wiring)
+- Coverage: 26 concept articles, 6 connection articles, 3 deprecated markers total — daily/2026-04-28.md fully compiled, no remaining gaps
+
+## [2026-04-29T00:15:00+04:00] compile | Daily Log 2026-04-28 (incremental #4)
+- Source: daily/2026-04-28.md
+- Articles created: (none)
+- Articles updated: [[concepts/memory-loop-architecture]] (added 21:33 FLUSH_ERROR; day-3 flush count corrected from 13→14, error count from 6→7, error rate from ~46%→50%)
+- New events since last compile: Memory flush at 21:33 (FLUSH_ERROR with exit code 1 — occurred after v4.4.0 publish session)
+- Coverage: 26 concept articles, 6 connection articles, 3 deprecated markers total — daily/2026-04-28.md fully compiled, final entry
+
+## [2026-04-29T19:00:00+04:00] compile | Daily Log 2026-04-29
+- Source: daily/2026-04-29.md
+- Articles created: [[concepts/underdog-quiz-validation-bug]] (Zod uuidSchema vs arbitrary string IDs silently broke 100% of quizzes — 163 questions scoring 0, every paying user locked out of gated content), [[concepts/qualia-email-routing]] (bookings@ via Resend send-only, info@ via Zoho Mail; Resend API key in Vercel env vars)
+- Articles updated: [[concepts/vercel-deploy-patterns]] (added `vercel promote` workaround for blocked CLI user — multi-account gotcha, deploy hierarchy now 3-tier), [[concepts/eventmaster-design-pivots]] (added /plan wizard design, /browse refinements, state guard blocking ship from setup state), [[concepts/memory-loop-architecture]] (added day-4 flush stats: 0 OK / 2 ERR = 100% error rate, small sample), [[concepts/claude-code-operational-gotchas]] (added Vercel multi-account CLI blocking gotcha)
+- Connections updated: [[connections/silent-failure-swallowing]] (added quiz validation as 5th instance — schema-validation swallowing pattern)
+- Sessions processed: 3 substantive (00:19 Underdog Academy quiz fix, 13:06 EventMaster design refinement, 18:17 booking email) + 2 memory flushes (both FLUSH_ERROR)
+- Concepts extracted: 2 new concept articles, 4 articles updated, 1 connection updated
+- Coverage: 28 concept articles, 6 connection articles, 3 deprecated markers total across all daily logs
+
+## [2026-04-29T19:20:18+04:00] compile | Daily Log 2026-04-29 (incremental)
+- Source: daily/2026-04-29.md
+- Articles created: [[concepts/elevenlabs-voice-agent-tool-design]] (client vs webhook tools, URL-spelling bug, unified agent config, Gemini→Claude Haiku swap, tool response design for voice agents)
+- Articles updated: [[concepts/memory-loop-architecture]] (corrected day-4 flush count from 2→3: added 19:20 FLUSH_OK; error rate corrected from 100%→~67%)
+- New sessions since last compile: Session 19:20 (ElevenLabs voice agents spelling URLs aloud — webhook tools returning cal.com URLs, client tools are correct for booking flows, unified both agents, LLM swapped from Gemini Flash to Claude Haiku 4.5), Memory flush 19:20 (FLUSH_OK — nothing worth saving)
+- Coverage: 29 concept articles, 6 connection articles, 3 deprecated markers total
+
+## [2026-04-29T19:45:18+04:00] compile | Daily Log 2026-04-29 (incremental #2)
+- Source: daily/2026-04-29.md
+- Articles created: (none)
+- Articles updated: [[concepts/memory-loop-architecture]] (added 19:45 FLUSH_OK; day-4 flush count corrected from 3→4, OK count from 1→2, error rate from ~67%→50%)
+- New events since last compile: Memory flush at 19:45 (FLUSH_OK — nothing worth saving)
+- Coverage: 29 concept articles, 6 connection articles, 3 deprecated markers total
+
+## [2026-04-29T20:24:31+04:00] compile | Daily Log 2026-04-29 (incremental #3)
+- Source: daily/2026-04-29.md
+- Articles created: [[concepts/brevo-transactional-vs-campaign]] (Brevo transactional `/smtp/email` doesn't resolve `{{ contact.* }}` merge tags; must use inline HTML; 4 stacked bugs masking pattern: env var baking → JWT key format → Brevo merge tags → sender address)
+- Articles updated: [[concepts/underdog-sales-webinar-system]] (added session 20:24 — 4 stacked bugs broke signup flow, Brevo inline HTML fix, JWT key format, `gsc@` sender swap), [[concepts/vercel-deploy-patterns]] (added `NEXT_PUBLIC_*` build-time baking gotcha — `vercel redeploy` doesn't pick up new env var values), [[connections/supabase-tooling-escape-hatches]] (added Supabase Edge Function JWT key format as 4th escape hatch instance)
+- New sessions since last compile: Session 20:24 (Underdog Sales webinar signup debugging — 4 stacked bugs, Brevo transactional vs campaign sends, NEXT_PUBLIC env var baking, Supabase JWT key requirement, sender address fix)
+- Coverage: 30 concept articles, 6 connection articles, 3 deprecated markers total
+
+## [2026-04-29T21:00:00+04:00] compile | Daily Log 2026-04-29 (incremental #4 — final)
+- Source: daily/2026-04-29.md
+- Articles created: [[concepts/ophthalmos-voice-agent-proposal]] (healthcare voice AI lead: €11-15K setup, €600/month, 200-300 calls/day, Cypriot Greek dialect scope multiplier, prestige client, intake form at qualiasolutions.net/ophthalmos), [[connections/voice-ai-platform-selection]] (ElevenLabs for website widgets vs Retell AI + Telnyx for telephony; platform choice determined by interaction channel, not voice quality)
+- Articles updated: [[concepts/claude-code-operational-gotchas]] (added NEXT_PUBLIC env var build-time baking gotcha and Supabase Edge Function JWT key format requirement)
+- New sessions since last compile: Session 20:24 (Ophthalmos voice agent proposal — healthcare voice AI pricing benchmarks, Cypriot Greek dialect challenge, intake form build, Zoho Books estimate QT-1162, work page reverted)
+- Coverage: 31 concept articles, 7 connection articles, 3 deprecated markers total — daily/2026-04-29.md fully compiled, no remaining gaps
