@@ -25,6 +25,14 @@
 
 Invoices in EUR for accounting; contract value in JOD.
 
+## Invoicing setup
+
+- **Zoho contact_id:** `706649000000353002` (Sakani — Smart IT Buildings L.L.C.)
+- **VAT treatment:** `non_eu_zero` (Jordan; no Cyprus VAT applies)
+- **Terms template:** `sakani_pda` (only client that uses this — references the Platform Development Agreement, governs scope / late payment / IP)
+- **Invoice template:** Use `project_deposit` / `project_balance` against the `SAKANI-2026-P1-NN` reference numbering. Milestone schedule pre-drafted (SAKANI-003, SAKANI-004) — generate next milestone via the dialog when due.
+- **Generate via:** ERP `/admin?tab=finance` → "New invoice from template"
+
 ## Related
 
 - [[Sakani App]]

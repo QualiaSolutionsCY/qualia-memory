@@ -37,7 +37,16 @@
 - INV-1249 (Mar): €2,856 paid
 - INV-1251 (Mar): €6,902 paid
 - INV-1253 (Mar): €820 paid
+- INV-10016 (May draft): €780 = retainer €275 + SEO €125 + Retell credit €304 (Retell line VAT-free)
 - See [[Finances Overview]]
+
+## Invoicing setup
+
+- **Zoho contact_id:** `706649000000314015` (GSC UNDERDOG SALES LTD)
+- **VAT treatment:** `cyprus_vat` (19% on retainer + SEO; Retell/usage line is VAT-free pass-through)
+- **Invoice template:** `monthly_retainer` (multi-line — retainer + SEO + AI/API usage)
+- **Cover email TO:** `Gsc@underdogsales.com`
+- **Generate via:** ERP `/admin?tab=finance` → "New invoice from template"
 
 ## Boss Brainz
 

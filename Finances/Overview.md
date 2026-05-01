@@ -2,6 +2,37 @@
 
 > Last refreshed from Qualia ERP (Zoho Books sync) on 2026-04-16.
 
+## How we invoice (May 2026 onward)
+
+Invoicing is owned by the Qualia ERP at `/admin?tab=finance` → **"New invoice from template"**. This is the canonical workflow — do not invoice directly from Zoho Books unless the ERP doesn't yet expose what you need (e.g. voiding, editing past invoices, recording payments).
+
+**Four invoice templates** (in `lib/invoice-templates.ts` of the qualia-erp repo):
+
+| Template | When to use | Pattern |
+|---|---|---|
+| `monthly_retainer` | Ongoing service clients (Underdog) | Multi-line: retainer + SEO + AI/API usage |
+| `simple_service` | Single-line monthly service ([[Maison Maud]], [[Armenius]]) | One line, customizable description |
+| `project_deposit` | 50% upfront on a new project (EventMaster pattern) | Requires proposal ref, e.g. `QS-2026-EVMSTR` |
+| `project_balance` | Final 50% on go-live | Same proposal ref as the deposit |
+
+**Two terms templates:** `generic` (default — used for everyone), `sakani_pda` (only [[Sakani]] — references the Platform Development Agreement).
+
+**Client tax treatment** is stored on `clients.default_vat_treatment` and decides VAT automatically:
+- `cyprus_vat` — 19% applies (Cyprus B2B)
+- `non_eu_zero` — VAT zeroed (Maison Maud / Sakani — UAE / Jordan)
+- `eu_reverse` — VAT zeroed (EU reverse-charge)
+
+**MCP exposure:** the same workflow is callable from any Claude Code project via the qualia-erp MCP server:
+- `mcp__qualia-erp__list_invoice_templates`
+- `mcp__qualia-erp__list_billable_clients`
+- `mcp__qualia-erp__list_invoices`
+- `mcp__qualia-erp__create_invoice_draft`
+- `mcp__qualia-erp__create_invoice_cover_email_draft`
+
+**Handoff runbook:** `docs/finance-runbook.md` in the qualia-erp repo. Designed so a non-engineer can run monthly billing without touching Zoho directly.
+
+**Defaults always create drafts** — nothing is sent to clients automatically. Review in Zoho Books, then click Send (which attaches the PDF).
+
 ## Monthly Recurring Revenue (April 2026)
 
 | Client | Amount (EUR) | Notes |
