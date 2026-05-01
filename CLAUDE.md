@@ -54,6 +54,15 @@ This vault uses Karpathy's LLM Wiki pattern, with two installed frameworks bridg
 - **coleam00/claude-memory-compiler** (`~/.local/share/claude-memory-compiler/`) — captures every Claude Code session via `SessionEnd` hook → `~/qualia-memory/raw/sessions/YYYY-MM-DD.md` → after 6 PM Europe/Nicosia, compiles into `~/qualia-memory/wiki/sessions/concepts/`. Config patched to point at this vault; do NOT `git pull` Cole's repo without re-applying the patch (see `~/.claude/projects/-home-qualia-new-qualia-memory/memory/llm_wiki_framework.md`).
 - **`/qualia-recall`** — Qualia-aware bridge skill that reads this vault before any planning command. Triggers on "what do I know about X", "have we done X before".
 
+## Operational Knowledge Boundaries
+
+This vault holds **knowledge** (patterns, conventions, lessons, client context). The **qualia-erp** at `https://portal.qualiasolutions.net` holds **operational state** (live invoices, payments, recurring contracts, financial KPIs). They are separate by design — do not duplicate live numbers here.
+
+For client invoicing specifically:
+- Per-client invoicing setup (`zoho_contact_id`, VAT treatment, template) → lives in `Clients/{Name}.md` notes (this vault) so future agents know how to invoice them.
+- The **canonical workflow** (templates, terms, runbook) → `qualia-erp/docs/finance-runbook.md` — this vault references it; don't duplicate it.
+- See `Finances/Overview.md` for the bridge between the two.
+
 ## Ingest Workflow
 
 When a new source is added to `raw/`:
